@@ -1,8 +1,11 @@
 // src/components/Home.js
 import React from 'react';
 import styled from 'styled-components';
-import backgroundImage from '../image_back.jpg'; // Adjust path as necessary
-import './Home.css'
+import backgroundImage from '../image_back.png'; // Adjust path as necessary
+import './Home.css';
+import PopularDishesRibbon from './PopularDishesRibbon';
+
+
 const HomeContainer = styled.div`
   background-image: url(${backgroundImage});
   background-size: cover;
@@ -28,9 +31,7 @@ const Home = () => {
   return (
     <HomeContainer>
       <ContentContainer>
-        <h1>Welcome to Our Food Delivery App</h1>
-        <p>Explore our menu and place your order!</p>
-        {/* Additional content or components */}
+        { <PopularDishesRibbon /> }
       </ContentContainer>
     </HomeContainer>
   );

@@ -1,0 +1,54 @@
+.ribbon-container {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color:whitesmoke; */
+  background: #fff8f4;
+  border-radius: 20px; /* Curved ends */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  }
+  
+  .ribbon {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  
+  .ribbon::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+  }
+  
+  .dish-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 20px;
+    text-align: center;
+  }
+  
+  .dish-image {
+    width: 200px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio, cover the box */
+    border-radius: 10px;
+  }
+  
+  h2 {
+    color:black;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  h3 {
+    color: black;
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  
+  p {
+    font-size: 14px;
+    font-style: oblique;
+    color: #666;
+  }

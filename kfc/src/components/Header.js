@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavBar = styled.nav`
-  background: #ff0000;
-  padding: 10px;
-  color: white;
+  background: black;
+  padding: 10px; 
+  color: black;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
 `;
 
 const NavLink = styled(Link)`
@@ -18,9 +21,13 @@ const NavLink = styled(Link)`
 const Header = () => {
   return (
     <NavBar>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/menu">Menu</NavLink>
-      <NavLink to="/cart">Cart</NavLink>
+      <img src="/avatar.png" width="45px" height="45px"/>
+      <div>
+      <NavLink to="/"><b>Home</b></NavLink>
+      <NavLink>|</NavLink>
+      <NavLink to="/menu"><b>Menu</b></NavLink>
+      </div>
+      <img src="/logo.png" width="45px" height="45px"/>
     </NavBar>
   );
 };

@@ -28,21 +28,29 @@ const RemoveButton = styled.button`
   cursor: pointer;
 `;
 
+
+
 const Cart = () => {
   const { cart, removeFromCart } = useContext(CartContext);
 
   const handleRemove = (itemId) => {
     removeFromCart(itemId);
   };
+  console.log(cart)
 
   return (
     <CartContainer>
       <h2>Cart</h2>
       {cart.length === 0 ? (
-        <p>Your cart is empty</p>
+      <div>
+      <p>Your cart is empty</p>
+      <p>{"\n"}</p>
+      <img src="/kart1.png" height="100px" width="100px" />
+      </div>    
       ) : (
         cart.map((item, index) => (
           <CartItem key={index}>
+            
             <ItemImage src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
             <p>Price: ${item.price}</p>

@@ -1,0 +1,60 @@
+* src/components/IntroAnimation.css */
+
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for intro animation container */
+.intro-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Optional: Set background color */
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  z-index: 10000;
+}
+
+/* Opacity transition when animation is done */
+.intro-animation.animation-done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Container for GIF and content */
+.gif-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the GIF itself */
+.gif {
+  width: 100%; /* Ensure GIF fills the container width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100vw; /* Limit width to viewport width */
+  max-height: 100vh; /* Limit height to viewport height */
+}
+
+/* Additional content styles (adjust as needed) */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: #ffffff; /* Example: Text color */
+  font-size: 24px; /* Example: Font size */
+}
